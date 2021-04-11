@@ -52,12 +52,12 @@ app.use(cookieParser())
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
 
-app.use('/', courseRoutes)
-app.use('/',authRoutes)
-app.use('/',userRoutes)
+app.use('/api', courseRoutes)
+app.use('/api',authRoutes)
+app.use('/api',userRoutes)
 
 
-const PORT= process.env.PORT || 8000;
+const PORT= process.env.PORT || 8070;
 
 app.listen(PORT , ()=>{
 

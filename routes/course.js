@@ -8,12 +8,12 @@ const {isAuth}= require('../controllers/authController')
 
 
 //router.post('/create', verifyToken, create_course)
-router.post('/create', create_course )
-router.get('/list', list_courses)
-router.get('/bystudent/:userId', courses_by_student )
+router.post('/course/create', create_course )
+router.get('/course/list', list_courses)
+router.get('/course/bystudent/:userId', courses_by_student )
 router.get('/:courseId', read)
-router.delete('/delete/:courseId/:userId', delete_course)
-router.put('/update/:courseId/:userId',update)
+router.delete('/course/delete/:courseId/:userId', delete_course)
+router.put('/course/update/:courseId/:userId',update)
 router.param('userId', userById)
 router.param('courseId', courseById)
 
